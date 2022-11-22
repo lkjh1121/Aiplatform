@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ </head>
+	<body>
+
+
+	<script>
+		
+		var money = 200;//전역변수
+		// 직접 함수(기능)을 만듬
+		//↓호출하지 않으면 호출되지 않음
+		function getMoney(){
+		var money = 300; //지역변수
+		//스크립트 안에서 브라우져 화면에 결과를 표시할 객체인 Document에 대한 설명
+		document.write(money); // 지역변수가 먼저 출력
+		document.write(this.money); // 전역변수가 먼저 출력 (this 객체자신)
+		
+		}
+		// 함수를 호출
+		getMoney();
+
+		// 앞으로 그냥 호출된 경우 .점 앞에 객체와 기능별로() 미리 나누어 놓은것
+		// 점 앞에 document(객체).write(기능) 객체안에 기능 별로 그룹을 나눠 놓은것 (메모리 효울적 사용을위해) 객체지향 언어
+		// 객체호출하지 않고 그냥 호출내장객체(내장함수)
+		
+
+		var money = 200;//전역변수
+		function getMoney(){
+		var money = 300; //지역변수
+		
+		document.write(money > 200); // 지역변수가 먼저 출력
+		document.write(this.money); // 전역변수가 먼저 출력 (this 객체자신)
+		
+		}
+
+		// 함수를 호출
+		getMoney();
+
+		alert("아이디가 틀립니다.");;
+		var val = confirm("당신은 유저입니까? ");
+		document.write("당신의 선택은 : " + val);
+		
+		var val = prompt ("당신은 유저입니까? ");
+		document.write("당신의 선택은 : " + prompt);
+
+	</script>
+		
+	</body>
+</html>

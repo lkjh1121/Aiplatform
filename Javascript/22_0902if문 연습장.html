@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+
+  <title>test</title>
+ </head>
+ <!-- 
+		 let str1, str2;
+		let str1_flag, str2_flag = (1, 1);
+		str1 = prompt("문자를 입력하세요.");
+		str2 = prompt("문자열을 한 번 더 입력하세요.");
+
+		if (str1.length > 5)
+		{
+			if (str2.length > 6)
+			{
+				document.write("둘 다 초과됐습니다.");
+			}
+			else{
+				document.write("str1은 초과됐고, str2는 초과되지 않았습니다.");
+			}
+		}
+		else if (str2.length > 6)
+		{
+			if (str1.length <= 5)
+			{
+				document.write("str1은 초과되지 않았고, str2는 초과됐습니다.");
+			}
+		}
+		else{
+			document.write("둘 다 초과되지 않았습니다.");
+		}
+
+		document.write(count+ "횟수");
+	
+		
+
+ !-->
+ <body>
+	<script>
+	
+	/* 변수 str1, str2에 문자열을 각각 입력 받는다.
+		str1의 길이가 5를 넘거나 str2의 길이가 6을 넘으면
+		초과됐다는 문구를 출력하시오.
+		*/
+		str1 = prompt("문자를 입력하세요");
+		str2 = prompt("문자를 입력하세요");
+
+		if (str1.length > 5){
+			if(str2.length > 6){
+			document.write("둘다 초과 되었습니다.");
+			}else{
+				document.write("sre2은 초과되지 않았고 str1는 초과되었습니다");
+			}
+		}
+		else if(str1.length < 5){
+			if(str2.length > 6){
+				document.write("sre1은 초과되지 않았고 str2는 초과되었습니다");
+			}
+			else{
+				document.write("둘다 초과되지 않았습니다");
+			}
+		}
+		
+	</script>
+ </body>
+</html>

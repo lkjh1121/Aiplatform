@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>계산기</title>
+	<style>
+		body,td {font-size:12px}
+	</style>
+ </head>
+ 	<!--
+		document.write("korea fighting".substring(6,14));
+		
+		//프롬프트를 통해 입력받은 주민번호를 기준으로 남여를 판별하는
+		//프로그램을 완성하시오
+
+		var jumin= prompt("주민번호를 전부 적어주세요,-기호를넣어주세요 예 800508-1254367");
+
+		var temp = jumin.charAt(7);
+
+		if(temp%2 == 0){
+
+		alert("여자입니다.");
+
+		}else{
+
+		alert("남자입니다.");
+
+		}
+		
+
+		var data = "서울시 동작구 상도동 23-7번지";
+		temp = data.match("상도동");
+		if(temp == '상도동'){
+			document.write("상도동에 살고 있습니다.");
+		}else{
+			document.write("상도동에 살고있지 않습니다.");
+		}
+		
+		// prompt를 이용하여 1~9사이의 숫자 하나를 입력 받습니다.
+		// 총 10번을 입력받아 그중 7을 입력받은 총 횟수를 화면에 출력
+		
+		// 1. 프롬프트로 입력받기
+		// 2. 총 10번 받기
+		// 7숫자 입력시 횟수 증가
+		var number;
+		var count = 0;
+		for(a=1; a<11; a++){
+			number = prompt("1~9사이 숫자를 입력하세요");
+			if(number==7) { 
+				count++;
+			}
+		}
+		
+		//6개의 숫자를 받는 배열을 생성 하세요.
+		//(1~45) 랜덤한 숫자를 만들어 배열에 순서대로 저장하고
+		// 화면에 출력하시오
+		var lotto = new Array(6);
+		
+		var number;
+
+		for (a=0; a<lotto.length; a++){
+			number=Math.ceil(Math.random()*45)//랜덤 45
+			
+			if (lotto.includes(number)){
+				a--;
+			}
+			else{
+				lotto[a] = number;
+				document.write(lotto[a]+" ");
+			}
+			}
+			<script>
+		function reseta(){
+
+		alert("곧 둘다 지워집니다.");
+
+		document.f.copy.value='';
+
+		document.f.original.value='';
+
+}
+	</script>
+	
+	<form name='f'><center>
+
+	   <h2>버튼을 누르면 복사가 됩니다</h2>
+
+	   <input type="text" name = "original" >&nbsp;
+	   <input type="text" name = "copy"> <br><br>
+	   <input type="button" name="btn" value="복사" onClick="document.f.copy.value=document.f.original.value">  
+	   <input type="button" name="del" value="지우기" onClick='reseta()'>
+	
+	</form>
+	
+
+	<input type="button" name="del" value="지우기" onClick="document.f.copy.value='',document.f.original.value=''">
+	
+
+
+	<form name='f'><center>
+
+	   <h2>버튼을 누르면 복사가 됩니다</h2>
+
+	   <input type="text" name = "original" >&nbsp;
+	   <input type="text" name = "copy"> <br><br>
+	   <input type="button" name="btn" value="복사" onClick="document.f.copy.value=document.f.original.value">  
+	   <script>
+		function reseta(){
+
+		alert("곧 둘다 지워집니다.");
+
+		document.f.copy.value='';
+
+		document.f.original.value='';
+
+}
+	</script>
+	
+	<form name='f'><center>
+
+	   <h2>버튼을 누르면 복사가 됩니다</h2>
+
+	   <input type="text" name = "original" >&nbsp;
+	   <input type="text" name = "copy"> <br><br>
+	   <input type="button" name="btn" value="복사" onClick="document.f.copy.value=document.f.original.value">  
+	   <input type="button" name="del" value="지우기" onClick='reseta()'>
+	
+	</form>
+	
+
+	<input type="button" name="del" value="지우기" onClick="document.f.copy.value='',document.f.original.value=''">
+	
+
+
+	<form name='f'><center>
+
+	   <h2>버튼을 누르면 복사가 됩니다</h2>
+
+	   <input type="text" name = "original" >&nbsp;
+	   <input type="text" name = "copy"> <br><br>
+	   <input type="button" name="btn" value="복사" onClick="document.f.copy.value=document.f.original.value">  
+	   <input type="button" name="del" value="지우기" onClick='reseta()'>
+	
+	</form>
+	</form>
+	!-->
+
+	<script>
+		
+		//자동으로 연상을 해줌
+		function reseta(){
+		 document.f.original.value = eval(document.f.original.value);
+		}
+		//지우기
+		function resetb(){
+			document.f.original.value='';
+		}
+	</script>
+	
+ <body>
+	
+	<form name='f'><center>
+
+	   <h2>계산기</h2>
+		<table border=2 bodercolor='black'>
+			
+			
+				<tr>
+					<td colspan="4">
+						<input type="text" name = "original"><br>
+					</td>
+				<tr>
+			
+			<div>
+				<tr>
+					<td colspan="1" align="center">
+						<input type="button" name="seven" value=" 7 " onClick="document.f.original.value += '7'">
+					</td>
+					<td colspan="1" align="center">
+						<input type="button" name="eight" value=" 8 " onClick="document.f.original.value += '8'">
+					</td>
+					<td colspan="1" align="center">
+						<input type="button" name="nine" value=" 9 " onClick="document.f.original.value += '9'">
+					</td colspan="1" align="center">
+					<td colspan="1" align="center">
+						<input type="button" name="dovoded" value=" / " onClick="document.f.original.value += '/'">
+					</td colspan="1" align="center">
+				</tr>
+				<tr>
+					<td colspan="1" align="center">
+						<input type="button" name="four" value=" 4 " onClick="document.f.original.value += '4'"></td>
+					<td colspan="1" align="center">
+						<input type="button" name="five" value=" 5 " onClick="document.f.original.value += '5'"></td>
+					<td colspan="1" align="center">
+						<input type="button" name="six" value=" 6 " onClick="document.f.original.value += '6'"></td>
+					<td colspan="1" align="center">
+						<input type="button" name="times" value=" * " onClick="document.f.original.value += '*'">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="1" align="center">
+						<input type="button" name="one" value=" 1 " onClick="document.f.original.value += '1'">
+					</td>
+					<td colspan="1" align="center">
+						<input type="button" name="two" value=" 2 " onClick="document.f.original.value += '2'">
+					</td>
+					<td colspan="1" align="center">
+						<input type="button" name="three" value=" 3 " onClick="document.f.original.value += '3'">
+					</td>
+					<td colspan="1" align="center">
+						<input type="button" name="minus" value=" - " onClick="document.f.original.value += '-'">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="1" align="center">
+						<input type="button" name="zero" value=" 0 " onClick="document.f.original.value += '0'">
+					</td>
+					<td colspan="1" align="center">
+						<input type="button" name="coma" value=" . " onClick="document.f.original.value += '.'">
+					</td>
+					<td colspan="1" align="center">
+						<input type="button" name="plus" value=" + " onClick="document.f.original.value += '+'">
+					</td>
+					<td colspan="1" align="center">
+						<input type="button" name="oo" value=" % " onClick="document.f.original.value += '%'">
+					</td>
+				</tr>
+			</div>
+			<div>
+				<tr>						
+					<td colspan="2.5">
+					   <input type="button" name="btn" value="계산하기" onClick="reseta()"> 
+					</td>
+					<td colspan="10">
+					   <input type="button" name="del" value="지우기" onClick='resetb()'>
+					</td>
+				</tr>		
+				
+			</div>	
+		</table>
+	</form>
+ </body>
+	
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>String 객체</title>
+ </head>
+ 	<!--
+		document.write("korea fighting".substring(6,14));
+		
+		//프롬프트를 통해 입력받은 주민번호를 기준으로 남여를 판별하는
+		//프로그램을 완성하시오
+
+		var jumin= prompt("주민번호를 전부 적어주세요,-기호를넣어주세요 예 800508-1254367");
+
+		var temp = jumin.charAt(7);
+
+		if(temp%2 == 0){
+
+		alert("여자입니다.");
+
+		}else{
+
+		alert("남자입니다.");
+
+		}
+		
+
+		var data = "서울시 동작구 상도동 23-7번지";
+		temp = data.match("상도동");
+		if(temp == '상도동'){
+			document.write("상도동에 살고 있습니다.");
+		}else{
+			document.write("상도동에 살고있지 않습니다.");
+		}
+		
+		// prompt를 이용하여 1~9사이의 숫자 하나를 입력 받습니다.
+		// 총 10번을 입력받아 그중 7을 입력받은 총 횟수를 화면에 출력
+		
+		// 1. 프롬프트로 입력받기
+		// 2. 총 10번 받기
+		// 7숫자 입력시 횟수 증가
+		var number;
+		var count = 0;
+		for(a=1; a<11; a++){
+			number = prompt("1~9사이 숫자를 입력하세요");
+			if(number==7) { 
+				count++;
+			}
+		}
+		
+	!-->
+ <body>
+	<script>
+
+		//6개의 숫자를 받는 배열을 생성 하세요.
+		//(1~45) 랜덤한 숫자를 만들어 배열에 순서대로 저장하고
+		// 화면에 출력하시오
+		var lotto = new Array(6);
+		
+		var number;
+
+		for (a=0; a<lotto.length; a++){
+			number=Math.ceil(Math.random()*45)//랜덤 45
+			
+			if (lotto.includes(number)){
+				a--;
+			}
+			else{
+				lotto[a] = number;
+				document.write(lotto[a]+" ");
+			}
+		}
+
+	</script>
+ </body>
+</html>

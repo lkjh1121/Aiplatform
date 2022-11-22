@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+
+  <title>Document</title>
+  <!--
+  kor = new Array(78, 56 , 89 ,93 , 88);
+		// 점수가 적은 순서대로 정렬하시오
+		document.write(kor.sort());
+
+		// DTAE 객체
+		happyhour = new Data(); // 시스템 현재 시간
+		
+		document.write(happyhour.getMonth()+1);
+
+		today = new Date();
+		birth = new Date(1999, 1, 10);
+		day = today.getDate() - birth.getDate();
+		mon = (today.getMonth() - birth.getMonth())*30;
+		year = (today.getYear() - birth.getYear())*365;
+		document.write(year + mon + day);
+ 
+		// DTAE 객체
+		happyhour = new Date(); // 시스템 현재 시간
+		bornday = new Date(2002,11,21);
+
+		document.write((happyhour-bonday)/1000/60/60/24+1);
+  !-->
+
+ </head>
+	<script>
+		// DTAE 객체
+		function realTime(){
+
+		now = new Date();//시스템 현제 시간 
+
+		hour=now.getHours(); // 시간 가져오기
+
+		min=now.getMinutes(); // 분 가져오기
+
+		sec=now.getSeconds(); // 초 가져오기
+
+		var total = hour+'시 '+min+'분 '+sec+'초'; // 스트
+
+		document.f.rtime.value = total;
+		}
+
+		setInterval("realTime()" ,1000);
+	</script>
+ <body>
+	<form name="f">
+		<center>
+			<input type="text" name="rtime"></input>
+		</center>
+	</form>
+ </body>
+</html>

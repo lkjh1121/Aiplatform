@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ </head>=
+ <body>
+	<script>
+		//우리반은 총 7명의 학생이 있습니다. -변수가 7개, 배열로받음
+		//이들의 국어 점수 , 영어(선택) 점수를 prompt로 받아
+		//평균 , 총점 ,최대점수(선택)을 화면에 출력하시오
+		//점수 입력 반복문
+
+		kor = new Array(7); //7개의 배열이 생성 0번지~ 7번지까지
+		eng = new Array(7);
+		sumkor=0; // 국어 누적변수
+		sumeng=0; // 영어 누적변수
+		for(a=0 ; a<7; a++){
+
+		kor[a] = prompt(a +"번 학생의 국어 점수 입력");
+		sumkor=sumkor+parseInt(kor[a]);//국어 점수 누적
+
+		eng[a] = prompt(a +"번 학생의 영어 점수 입력");
+		sumeng=sumeng+parseInt(eng[a]);//영어 점수 누적
+		}
+
+		document.write("국어 총점은 = "+sumkor +
+					   "국어 평균은 = "+sumkor/7 +"<br>");
+
+		document.write("영어 총점은 = "+sumeng +
+					   "영어 평균은 = "+sumeng/7 +"<br>");
+
+		//최대점수 구하는 방법
+		var temp = 0; // 임시 기억 변수
+		for	(a=0; a<7; a++){
+		document.write(a +"번 국어점수 ="+ kor[a]);
+			//비교를 통하여 임시기억 변수에 값을 바꾸어줌
+			if(kor[a] > temp){
+				temp = kor[a];
+			}
+
+		}
+		document.write("국어 가장 큰 점수는 ="+ temp);
+
+	</script>
+ </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ </head>
+ <body>
+	<script>
+
+		kor = new Array(10); //5개의 배열이 생성 0번지~ 4번지까지
+		
+		kor[0] = 10;
+		kor[1] = 20;
+		kor[2] = 40;
+		kor[3] = 56;
+		kor[4] = 77;
+
+		//document.write(kor[0]);
+		//우리반 전체 중 합계와 평균을 구하시오
+		// 누적 변수
+		sum=0;
+		for(a=0; a<5; a++){
+			sum = sum + kor[a];
+
+		}
+		document.write("총점은 = "+sum);
+
+		document.write("평균은 = "+sum/5);
+
+		//document.write("나올까요");
+	</script>
+ </body>
+</html>

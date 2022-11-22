@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ </head>
+	<body>
+	<table border=1 width=100>
+		<script>
+				//<table border=1 width=100> 스크립트 밖에서 사용 안에서는 document.write 정의후 ("<table border=1 width=100>");
+				//for(1:a=2; 2:a<10;참이면 실행 후 증감식, 3:a++;){
+				//	실행문 4:document.write();
+				//} 2.4.3 순서
+				//점수변수
+				
+			//document.write("<table border=1 width=100>");
+			//for(a=2; a<10; a++){
+			//	document.write("<tr><th>" + a +"</th></tr>");
+			//}
+			//document.write("</table>");
+		
+		
+		
+			//document.write("<table border=1 width=100>");
+
+			//for(a=9; a>0; a--){
+	
+			//document.write("<tr><th>2 * " + a +"= " + a*2 +"</th></tr>"); 
+
+			//}
+
+			//document.write("</table>");
+			
+			//누적변수
+
+			sum =0;
+
+			for(a=1; a<101 ; a += 2){
+
+			sum = sum+a;//1부터 100까지의 합을 의미 
+
+			}
+
+			document.write("총 합은 = " +sum);
+
+		</script>
+	</table>
+
+	</body>
+ </html>
