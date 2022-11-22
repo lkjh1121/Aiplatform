@@ -1,0 +1,48 @@
+from cgitb import text
+from operator import mod
+from sklearn.datasets import load_files
+import pandas as pd
+import numpy as np
+from sklearn.feature_extraction.text import CountVectorizer
+import matplotlib.pyplot as plt
+import re # 정규식 처리 하는 라이브러리
+
+# 파일을 읽는다. - 구분자가 탭키다
+# keep_default_na=False - NaN 값을 None으로 바꿔준다 
+df_train = pd.read_csv("data/ratings_train.txt", delimiter="\t", keep_default_na=False)
+print(df_train.head())
+text_train, y_train = df_train["document"].values, df_train["label"].values
+print(text_train[:3])
+
+# text_train 을 벡터화 하자
+from konlpy.tag import Okt # 현재 가장 많이 사용하는 형태소 분리 알고리즘
+okt = Okt()
+stop_words = ["아", "..", "?", "이", "있는",]
+
+def okt_tokenizer(text):
+    # 특수문자를 제거하기 (한글, 숫자, 영어, \s - 공백)
+    text = re.sub(r"[^\uAC00-\uD7A3\s]", "", text)
+    temp = okt.morphs(text)
+    # 제거할거 있으면 제거시켜서 보내기, 불필요한 단어나 한글자는 삭제시키고 나머지만
+    # return temp
+    temp = [word for word in temp if word not in stop_words and len(word)>=2]
+    return temp
+
+for i in range(0, 10):
+    print(okt_tokenizer(text_train[i]))
+
+# CountVectorizer의 tokenizer 매개변수에 우리가 토큰나이저 만들어서 주면된다.
+# 한글의 한글 토큰나이저로 바꿔치기를 한다. 경고는 무시해도됨
+vect = CountVectorizer(tokenizer=okt_tokenizer).fit(text_train)
+
+feature_names = vect.get_feature_names_out()
+print("특성의 개수 ", len(feature_names))
+print(feature_names[:20])
+
+X_train = vect.transform(text_train)
+
+from sklearn.linear_model import LogisticRegression
+model = LogisticRegression(solver="liblinear")
+model.fit(X_train, y_train)
+print(model.score(X_train, y_train))
+
