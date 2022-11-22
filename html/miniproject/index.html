@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/home_style.css">
+	<script type="text/javascript" src="js/index_js.js"></script>
+	<title>Agarieter | 간식 조절의 모든 것</title>
+</head>
+<body class = "home">
+    <div class="logo-zone">
+        <img src="images/logo.png">
+    </div>
+    <header class = "round-box">
+        <div class = icon-circle>
+            📋
+        </div>
+        <div id = "header-input-register">
+            기본 정보를 등록합니다.
+        </div>
+        <div class = form>
+            <div class = "form-input">
+                <div>
+                    몸무게(kg)
+                </div>
+                <input 
+                    id = "user-weight"
+                    type="text" placeholder="몸무게를 입력해주세요." />
+            </div>
+            <div class = "form-input">
+                <div>
+                    허용 칼로리(kcal)
+                </div>
+                <input
+                    id = "user-cal" 
+                    type="text" placeholder="섭취 가능한 칼로리를 입력해주세요." />
+            </div>
+            <button id = "register" onclick="register_input();">
+                <span>등록하기</span>
+            </button>
+            <button id = "skip" onclick="skip_input();">
+                <span>건너뛰기</span>
+            </button>
+        </div>
+    </header>
+    <footer class = "round-box">
+        <div class = icon-circle>
+            📄
+        </div>
+        <div id="footer-title">
+        </div>
+        <ul id="footer-list">
+        </ul>
+    </footer>
+</body>
+</html>

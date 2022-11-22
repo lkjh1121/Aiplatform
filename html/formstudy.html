@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  
+  <title>인공지능</title>
+
+ </head>
+ <body>
+	<!----<h4>노란오리 팬클럽 가입</h4>
+	<form border=1 color="black">
+		<div>정보입력</div>
+		<tr>아이디<input type="text" name="id"></input></tr></br>
+		
+		<tr>이메일<input type="email" name="emil"></input></tr></br>
+		
+		<tr>비밀번호<input type="password1" name="pass1" size="25"></input></tr></br>
+		
+		<tr>비밀번호 확인<input type="password2" name="pass2" size="25"></input></tr></br>
+		
+		<tr>가입경로
+			<select type="select"></select>
+		</tr></br>
+		
+		<tr>메모<textarea></textarea></tr></br>
+		
+		<tr>생일<input type="text"></input></tr></br>
+		
+		<form>노란 오리 게시물 알림<br>
+			<input type="radio" name="메일수신">메일수신</input>
+			<input type="radio" name="메일수신">메일 수신 안 함</input></br>
+		</form>
+
+		<input type="submit" value="전송하기"></input>
+		<input type="reset" value="취소하기"></input>
+	</form>
+	--->
+	 <div id="wrapper">
+        <section id="user" class="register">
+            <form action="post">
+                <table border="0">
+                    <caption>노란 오리 팬클럽 가입</caption>
+                    <tr>
+                        <td>아이디</td>
+                        <td>
+                            <input type="text" name="uid" placeholder="4자 ~ 10자 사이, 공백없이"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이메일</td>
+                        <td>
+                            <input type="email" name="email" placeholder="이메일 입력"/>
+                        </td>
+                    </tr>
+					<tr>
+                        <td>비밀번호</td>
+                        <td>
+                            <input type="password1" name="pass1" placeholder="문자와 숫자,특수 기호 포함"/>                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>비밀번호 확인</td>
+                        <td>
+                            <input type="password2" name="pass2" placeholder="비밀번호 확인 입력"/>
+                          
+                        </td>
+                    </tr>
+                    
+                    <tr>
+						<td height=40 >가입경로</td>
+							<td>
+								<select name="가입경로" size=1>
+									<option value=1>블로그
+									<option value=2>카페
+									<option value=3>인스타
+								</select>
+							</td>
+						</td>
+                    </tr>
+                    <tr>
+                        <td>메모</td>
+                        <td>
+                            <div>
+                                <textarea cols="30" rows="3"placeholder="노란 오리에게 남기고 싶은 말을 자유롭게 적어주세요">
+								</textarea>
+                            </div>                            
+                        </td>
+                    </tr>
+					<tr>
+						<td>생일</td>
+						<td>
+							<input type="date" name="birth"></input>
+						</td>
+					</tr>
+				</table>
+				<table border="1">노란 오리 게시물 알림
+					<tr>
+						<td>
+							<input type="radio">메일 수신</input>
+						</td>
+						<td>
+							<input type="radio">메일 수신 안함</input>
+						</td>
+					</tr>
+				</table></br>
+
+                <input type="submit" value="가입하기" align="center"/>
+				<input type="reset" value="취소" align="center"/>
+
+            </form>
+        </section>
+    </div>
+ </body>
+</html>

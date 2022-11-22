@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>자바스크립트의 변수</h3>
+</body>
+</html>
+
+<script>
+    // 한줄 주석 = 자바스크립트는 변수를 선언하지 않아도 사용이 가능하다.
+    // 변수를 변도로 선어하고 싶으면 var 키워드는 let만 붙인다.
+    // 예전에는 var 이였는데 현재는 let 
+    // 2015년에 ECMA script 라고 모던스크립트가 만들어짐
+    let a = 10; // 문장의 끝에 ; (세미콜론)을 붙여야 한다.
+    let b = 20; // 생략하면 지가 붙인다.
+    console.log("a = ", a);
+    console.log("b = ", b);
+    console.log("a+b = ", a+b);
+    
+    // 백틱(`)
+    s1 = "문장을 만들어보자";
+    s2 = '파이썬 머신러닝 완벽 가이드'; 
+    s3 = a + " + " + b + " = " + (a+b);
+
+    console.log( s1 );
+    console.log( s2 );
+    console.log( s3 );
+
+    // 숫자와 문자가 섞여서 문장을 만들어야 할떄나 혹은 문자 데이터가
+    // 커서 여러줄에 걸쳐야 할때 백틱(`)을 사용한다.
+    s4 = `${a} + ${b} = ${a+b}`;
+    console.log(s4)
+
+    s5 = `
+        동해물과 백두산이 
+        마르고 닳도록
+        하느님이 보우하사
+        우리나라 만세
+        `;
+    console.log(s5);
+
+</script>

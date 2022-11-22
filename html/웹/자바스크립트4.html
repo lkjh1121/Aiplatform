@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>자바스크립트 for문 연습</h3>
+</body>
+</html>
+
+<script>
+// 함수 만들기
+function add(x, y){
+    return x+y
+};
+console.log(add(5, 9)); // 함수 호출하기
+
+// 함수표현식 = 함수의 주소를 변수에 저장해서 간단하게 쓰고버린다.
+// 람다식으로 가는 중간 단계가 있다.
+sub = function (x, y){ // 이벤트 핸들러 만들때 많이 사용한다.
+    return x-y
+};
+console.log(sub(5, 9));
+
+mul = (x, y)=>{ // 람다가 아닌 화살표함수
+    return x*y
+};
+
+mul2 = (x, y)=>x*y; // 화살표 함수 = react라이브러리
+
+console.log(mul(4, 5));
+console.log(mul2(4, 5));
+
+// filter, map, zip 함수
+let fruits = ["사과", "오렌지", "바나나", "배", "복숭아", "수박"];
+
+// forEach 함수의 매개변수는 함수이다. 함수를 주면 그 함수를 fruits
+// 배열이 요소마다 호출 = 출력용으로 사용한다
+// fuits 배열의 각 요소가 파라미터로 전달된다.
+fruits.forEach(f=>{
+    console.log(f);
+});
+
+result = fruits.filter(f=>{
+    if (f.length>=2)
+   
+    return true;
+});
+console.log(result);
+</script>

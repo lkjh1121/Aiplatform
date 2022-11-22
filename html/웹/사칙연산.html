@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    x : <input type="text" name="" id="xvalue"> <br/>
+    y : <input type="text" name="" id="yvalue"> <br/>
+    result : <span id="result"
+    
+    
+    ></span> <br/>
+
+    <input type="button" value="add" id="btnAdd">
+    <input type="button" value="sub" id="btnSub">
+    <input type="button" value="mul" id="btnMul">
+    <input type="button" value="div" id="btnDiv">
+    
+    <br/>
+</body>
+</html>
+<script>
+    // html 문서를 프로그래밍 개체화 (DOM 객체)
+    // document html 문서를 말한다.
+    /*
+    var obj = document.getElementById("태그의 아이디값")
+    id를 갖고 있는 객체 자체를 가져온다.
+    이 객체가 input 류이면 값 읽거 쓰기가 value
+    이 객체가 input 류가 아니면 값일고 쓰기는 innerHTML
+    
+    name속성을 이용할때 = input류만, 서버로 정보를 전달하는 태그들
+    var objList = document.getElementsByName("name속성"); 무조건 객체배열
+    
+    class, tag 있음
+    var objList = document.getElementsByName("class속성"); 무조건 객체배열
+    var objList = document.getElementsByTag("태그명성"); 무조건 객체배열
+    
+    */
+    
+    window.onload=function(){
+        btnAdd = document.getElementById("btnAdd");
+        btnAdd.addEventListener("click", ()=>{
+            var x = document.getElementById("xvalue").value;
+            var y = document.getElementById("yvalue").value;
+            // value 속성은 input 태그루만 있따.
+            var result = parseInt(x)+parseInt(y);
+            // 문자열로 인식해서 문자열 덧붙이기
+            // span 태그는 innerHTML을 쓴다
+            document.getElementById("result").innerHTML=
+            "<h1>"+result+"</h1>";
+        });
+        
+        btnAdd = document.getElementById("btnSub");
+        btnAdd.addEventListener("click", ()=>{
+            var x = document.getElementById("xvalue").value;
+            var y = document.getElementById("yvalue").value;
+            var result = parseInt(x)+parseInt(y);
+            document.getElementById("result").innerHTML=
+            "<h1>"+result+"</h1>";
+        });
+        
+        btnAdd = document.getElementById("btnMul");
+        btnAdd.addEventListener("click", ()=>{
+            var x = document.getElementById("xvalue").value;
+            var y = document.getElementById("yvalue").value;
+            var result = parseInt(x)+parseInt(y);
+            document.getElementById("result").innerHTML=
+            "<h1>"+result+"</h1>";
+        });
+        
+        btnAdd = document.getElementById("btnDiv");
+        btnAdd.addEventListener("click", ()=>{
+            var x = document.getElementById("xvalue").value;
+            var y = document.getElementById("yvalue").value;
+            var result = parseInt(x)+parseInt(y);
+            document.getElementById("result").innerHTML=
+            "<h1>"+result+"</h1>";
+        });
+        
+        
+  
+    };
+
+</script>

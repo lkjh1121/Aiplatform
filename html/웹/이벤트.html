@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>이벤트 처리하기</h1>
+    <input type="button" value="클릭1" onclick="goEvent1()">
+    
+    <h1>이벤트 처리하기2</h1>
+    <input type="button" value="클릭2" id="btnPress"> <br/>
+</body>
+</html>
+
+<script>
+    function goEvent1(){
+
+        alert("눌림");
+    };
+
+    window.onload = function(){
+        // 모든 문서가 화면에 잘 출력되고 난 이후에 호출된다.
+        // 자바스크립트에서 html 태그에 접근하는 방법
+        btnPress = document.getElementById("btnPress");
+        btnPress.addEventListener("click", function(){
+            alert("^--------------------------------------^");
+        });
+    };
+</script>

@@ -1,0 +1,144 @@
+body {
+    background-color: rgb(184, 205, 231);
+}
+
+.round-box {
+    position: relative;
+    margin: auto;
+    background-color: white;
+    border-radius: 150px;
+    margin-top: 20px;
+    width: 1000px;
+    justify-content: center;
+    box-shadow: 0px 0px 15px rgb(153, 153, 153);
+}
+
+.logo-zone {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: -40px;
+}
+
+.home header {
+    height: fit-content;
+    padding-top:50px;
+    padding-bottom:50px;
+    font-size: 24px;
+}
+
+#header-input-register {
+    width: 750px;
+    margin: auto;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.home header .form {
+    display: flex;
+    margin: auto;
+    justify-content: left;
+}
+
+.icon-circle {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 40px;
+    font-size: 35px;
+    box-shadow: 0px 0px 10px rgb(153, 153, 153);
+    background-color: white;
+}
+
+.form-input {
+    width: 250px;
+    height: 50px;
+    padding-bottom: 40px;
+    margin-left: 125px;
+}
+
+
+#user-weight {
+    width: 320px;
+    height: 40px;
+    border: 0px;
+    box-shadow: 0px 0px 4px rgb(186, 185, 185);
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-left: 12px
+}
+
+#user-cal {
+    width: 320px;
+    height: 40px;
+    border: 0px;
+    box-shadow: 0px 0px 4px rgb(186, 185, 185);
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-left: 12px;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+}
+
+header button {
+    position: absolute;
+    width: 150px;
+    height: 60px;
+    bottom: -80px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 40px;
+    transition: transform 0.1s;
+    color: white;
+}
+
+#register{
+    background-color: rgb(91, 91, 230);
+    left: 30%;
+}
+#skip{
+    background-color: rgb(128, 128, 128);
+    right: 35%;
+}
+
+header button:hover {
+    transform: scale(0.95);
+    background-color: rgb(81, 81, 225);
+    color: white;
+}
+
+.home footer {
+    height: fit-content;
+    padding-top:50px;
+    padding-bottom:50px;
+    font-size: 24px;
+    visibility: hidden;
+}
+
+#footer-title, #section-title {
+    width: 750px;
+    margin: auto;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+#footer-list, #section-list {
+    width: 750px;
+    margin: auto;
+    padding-left: 0;
+}
+
+#footer-list li, #section-list li {
+    list-style: none;
+    display:flex;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(229, 229, 229);
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>자바스크립트 for문 연습</h3>
+</body>
+</html>
+
+<script>
+    // 옛날식 for문
+    // i=1; i<=10; {} i=2; i<=10; {} 
+    for(i=1; i<=10; i++){
+        console.log( i );
+    }
+
+    // 배열
+    flowers = ["작약", "백합", "능소화", "백일홍", "모란"];
+    console.log(flowers); // 배열 통쨰로 한번에 출력된다.
+    for(i=0; i<flowers.length; i++){
+        console.log(flowers[i]);
+    }
+    // 새롭게 만들은 for 문
+    for(i in flowers){ // index가 온다
+        console.log(flowers[i]);
+    }
+    
+    for(f in flowers){
+        console.log(f);
+    }
+    
+    // 람다식 => 화살표를 사용한다. = 개발자들 사이에 가장 선호도가 높다.
+    flowers.forEach( (e)=>{
+        console.log(e);
+    })
+</script>
